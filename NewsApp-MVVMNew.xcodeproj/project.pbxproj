@@ -18,8 +18,8 @@
 		096B522B24BB9652008F26BC /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B522724BB9652008F26BC /* NewsListTableViewController.swift */; };
 		096B522C24BB9652008F26BC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B522924BB9652008F26BC /* DataModel.swift */; };
 		096B522F24BB9754008F26BC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B522E24BB9754008F26BC /* ViewModel.swift */; };
-		096B523224BBA639008F26BC /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B523124BBA639008F26BC /* NewsTableViewCell.swift */; };
-		096B523424BBACC8008F26BC /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096B523324BBACC8008F26BC /* NewsTableViewCell.xib */; };
+		096B523B24BBC33A008F26BC /* NewssTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B523924BBC33A008F26BC /* NewssTableViewCell.swift */; };
+		096B523C24BBC33A008F26BC /* NewssTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096B523A24BBC33A008F26BC /* NewssTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 		096B522724BB9652008F26BC /* NewsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
 		096B522924BB9652008F26BC /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		096B522E24BB9754008F26BC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		096B523124BBA639008F26BC /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
-		096B523324BBACC8008F26BC /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		096B523924BBC33A008F26BC /* NewssTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewssTableViewCell.swift; sourceTree = "<group>"; };
+		096B523A24BBC33A008F26BC /* NewssTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewssTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +177,8 @@
 		096B523024BBA620008F26BC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				096B523124BBA639008F26BC /* NewsTableViewCell.swift */,
-				096B523324BBACC8008F26BC /* NewsTableViewCell.xib */,
+				096B523924BBC33A008F26BC /* NewssTableViewCell.swift */,
+				096B523A24BBC33A008F26BC /* NewssTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,9 +287,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096B523C24BBC33A008F26BC /* NewssTableViewCell.xib in Resources */,
 				096B520124BB9625008F26BC /* LaunchScreen.storyboard in Resources */,
 				096B51FE24BB9625008F26BC /* Assets.xcassets in Resources */,
-				096B523424BBACC8008F26BC /* NewsTableViewCell.xib in Resources */,
 				096B51FC24BB9621008F26BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,11 +316,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				096B51F524BB9621008F26BC /* AppDelegate.swift in Sources */,
-				096B523224BBA639008F26BC /* NewsTableViewCell.swift in Sources */,
 				096B522A24BB9652008F26BC /* WebServices.swift in Sources */,
 				096B522B24BB9652008F26BC /* NewsListTableViewController.swift in Sources */,
 				096B51F724BB9621008F26BC /* SceneDelegate.swift in Sources */,
 				096B522F24BB9754008F26BC /* ViewModel.swift in Sources */,
+				096B523B24BBC33A008F26BC /* NewssTableViewCell.swift in Sources */,
 				096B522C24BB9652008F26BC /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
