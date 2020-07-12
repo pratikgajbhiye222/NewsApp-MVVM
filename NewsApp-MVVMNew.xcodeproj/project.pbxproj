@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		096B51F524BB9621008F26BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B51F424BB9621008F26BC /* AppDelegate.swift */; };
 		096B51F724BB9621008F26BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B51F624BB9621008F26BC /* SceneDelegate.swift */; };
-		096B51F924BB9621008F26BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B51F824BB9621008F26BC /* ViewController.swift */; };
 		096B51FC24BB9621008F26BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096B51FA24BB9621008F26BC /* Main.storyboard */; };
 		096B51FE24BB9625008F26BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 096B51FD24BB9625008F26BC /* Assets.xcassets */; };
 		096B520124BB9625008F26BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096B51FF24BB9625008F26BC /* LaunchScreen.storyboard */; };
 		096B520C24BB9625008F26BC /* NewsApp_MVVMNewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B520B24BB9625008F26BC /* NewsApp_MVVMNewTests.swift */; };
 		096B521724BB9625008F26BC /* NewsApp_MVVMNewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B521624BB9625008F26BC /* NewsApp_MVVMNewUITests.swift */; };
+		096B522A24BB9652008F26BC /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B522524BB9652008F26BC /* WebServices.swift */; };
+		096B522B24BB9652008F26BC /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B522724BB9652008F26BC /* NewsListTableViewController.swift */; };
+		096B522C24BB9652008F26BC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B522924BB9652008F26BC /* DataModel.swift */; };
+		096B522F24BB9754008F26BC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B522E24BB9754008F26BC /* ViewModel.swift */; };
+		096B523224BBA639008F26BC /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096B523124BBA639008F26BC /* NewsTableViewCell.swift */; };
+		096B523424BBACC8008F26BC /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096B523324BBACC8008F26BC /* NewsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,6 @@
 		096B51F124BB9621008F26BC /* NewsApp-MVVMNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NewsApp-MVVMNew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		096B51F424BB9621008F26BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		096B51F624BB9621008F26BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		096B51F824BB9621008F26BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		096B51FB24BB9621008F26BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		096B51FD24BB9625008F26BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		096B520024BB9625008F26BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		096B521224BB9625008F26BC /* NewsApp-MVVMNewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NewsApp-MVVMNewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		096B521624BB9625008F26BC /* NewsApp_MVVMNewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApp_MVVMNewUITests.swift; sourceTree = "<group>"; };
 		096B521824BB9625008F26BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		096B522524BB9652008F26BC /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		096B522724BB9652008F26BC /* NewsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
+		096B522924BB9652008F26BC /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		096B522E24BB9754008F26BC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		096B523124BBA639008F26BC /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		096B523324BBACC8008F26BC /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +111,11 @@
 			children = (
 				096B51F424BB9621008F26BC /* AppDelegate.swift */,
 				096B51F624BB9621008F26BC /* SceneDelegate.swift */,
-				096B51F824BB9621008F26BC /* ViewController.swift */,
+				096B523024BBA620008F26BC /* View */,
+				096B522D24BB9747008F26BC /* ViewModel */,
+				096B522624BB9652008F26BC /* Controller */,
+				096B522824BB9652008F26BC /* Model */,
+				096B522424BB9652008F26BC /* Services */,
 				096B51FA24BB9621008F26BC /* Main.storyboard */,
 				096B51FD24BB9625008F26BC /* Assets.xcassets */,
 				096B51FF24BB9625008F26BC /* LaunchScreen.storyboard */,
@@ -126,6 +140,47 @@
 				096B521824BB9625008F26BC /* Info.plist */,
 			);
 			path = "NewsApp-MVVMNewUITests";
+			sourceTree = "<group>";
+		};
+		096B522424BB9652008F26BC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				096B522524BB9652008F26BC /* WebServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		096B522624BB9652008F26BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				096B522724BB9652008F26BC /* NewsListTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		096B522824BB9652008F26BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				096B522924BB9652008F26BC /* DataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		096B522D24BB9747008F26BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				096B522E24BB9754008F26BC /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		096B523024BBA620008F26BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				096B523124BBA639008F26BC /* NewsTableViewCell.swift */,
+				096B523324BBACC8008F26BC /* NewsTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +289,7 @@
 			files = (
 				096B520124BB9625008F26BC /* LaunchScreen.storyboard in Resources */,
 				096B51FE24BB9625008F26BC /* Assets.xcassets in Resources */,
+				096B523424BBACC8008F26BC /* NewsTableViewCell.xib in Resources */,
 				096B51FC24BB9621008F26BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +315,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				096B51F924BB9621008F26BC /* ViewController.swift in Sources */,
 				096B51F524BB9621008F26BC /* AppDelegate.swift in Sources */,
+				096B523224BBA639008F26BC /* NewsTableViewCell.swift in Sources */,
+				096B522A24BB9652008F26BC /* WebServices.swift in Sources */,
+				096B522B24BB9652008F26BC /* NewsListTableViewController.swift in Sources */,
 				096B51F724BB9621008F26BC /* SceneDelegate.swift in Sources */,
+				096B522F24BB9754008F26BC /* ViewModel.swift in Sources */,
+				096B522C24BB9652008F26BC /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
