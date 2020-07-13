@@ -31,6 +31,9 @@ class NewsViewModelTitleItem: NewsViewModelItem {
    var sectionTitle: String {
       return "Main Info"
    }
+    var rowCount: Int {
+        return articles.count
+    }
     var articles: [Article]
     init(articles: [Article]) {
         self.articles = articles
@@ -45,19 +48,22 @@ class NewsViewModel : NSObject{
     //MARK: - Initilization
     override init() {
         super.init()
-        let url = URL(string: "http://newsapi.org/v2/everything?q=bitcoin&from=2020-06-12&sortBy=publishedAt&apiKey=ebb1d816fc8c47faaba6f41af62f1d27")!
+        let url = URL(string: "http://newsapi.org/v2/everything?q=bitcoin&from=2020-06-13&sortBy=publishedAt&apiKey=ebb1d816fc8c47faaba6f41af62f1d27")!
         WebServices().getArticles(url: url) { (articlesllist) in
-            if !articlesllist.isEmpty {
-                let newlistItem = NewsViewModelTitleItem(articles: articlesllist)
-                    self.items.append(newlistItem)
+            let articleArray = articlesllist.articles
+            if !articleArray.isEmpty {
+                let newlistItem = NewsViewModelTitleItem(articles: articleArray)
+                self.items.append(newlistItem)
+                print(self.items.count)
             }
         }
+        print(items.count)
     }
 }
 
 extension NewsViewModel: UITableViewDataSource {
    func numberOfSections(in tableView: UITableView) -> Int {
-      return items.count
+    return items.count
    }
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       return items[section].rowCount
@@ -67,7 +73,8 @@ extension NewsViewModel: UITableViewDataSource {
     let item = items[indexPath.section]
            switch item.type {
            case .titleAndDescription:
-            if let item = item as? NewsViewModelTitleItem ,let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.identifier, for: indexPath) as? NewsTableViewCell {
+            if let item = item as? NewsViewModelTitleItem ,let cell = tableView.dequeueReusableCell(withIdentifier: NewssTableViewCell.identifier, for: indexPath) as? NewssTableViewCell {
+                print(item.articles.count)
                 cell.item = item.articles[indexPath.row]
                 
                    return cell

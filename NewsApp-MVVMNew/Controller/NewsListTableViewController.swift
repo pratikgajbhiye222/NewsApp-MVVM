@@ -15,17 +15,18 @@ class NewsListTableViewController: UIViewController {
     @IBOutlet weak var tableView : UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tableView.dataSource = viewModel
         setup()
         viewModel.reloadSections = { [weak self] (section: Int) in
             DispatchQueue.main.async {
 
-                self?.tableView.dataSource = self?.viewModel
                 self?.tableView.reloadData()
             }
         }
 
 
-        tableView?.register(NewsTableViewCell.nib, forCellReuseIdentifier: NewsTableViewCell.identifier)
+        tableView.register(NewssTableViewCell.nib, forCellReuseIdentifier: NewssTableViewCell.identifier)
     }
     
     private func setup(){

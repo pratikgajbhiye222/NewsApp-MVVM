@@ -21,7 +21,7 @@ class NewssTableViewCell: UITableViewCell {
                 }
                 if let title = title {
                     title.text = item.title
-                    print("bhaaa \(item.title)")
+                    print("\(String(describing: item.title))")
                 }
                 if let des = deescription {
                     des.text = item.description

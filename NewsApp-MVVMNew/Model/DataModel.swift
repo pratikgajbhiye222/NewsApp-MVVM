@@ -16,8 +16,8 @@ struct ArticlesList: Codable {
 
 // MARK: - Article
 struct Article: Codable {
-    let title: String
-    let description: String
+    let title: String?
+    let description: String?
 }
 
 // MARK: - Source

@@ -8,7 +8,7 @@
 
 import Foundation
 class WebServices {
-    func getArticles(url: URL , completion: @escaping([Article])-> Void){
+    func getArticles(url: URL , completion: @escaping(ArticlesList)-> Void){
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else {
                 return
@@ -17,7 +17,7 @@ class WebServices {
             
             do
             {
-                let responceObject = try JSONDecoder().decode(ArticlesList.self, from: data).articles
+                let responceObject = try JSONDecoder().decode(ArticlesList.self, from: data)
                 completion(responceObject)
                 print(responceObject)
                 return
