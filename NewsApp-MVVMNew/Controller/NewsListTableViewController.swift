@@ -15,17 +15,10 @@ class NewsListTableViewController: UIViewController {
     @IBOutlet weak var tableView : UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel.loadData()
+        viewModel.delegate = self
         tableView.dataSource = viewModel
         setup()
-        viewModel.reloadSections = { [weak self] (section: Int) in
-            DispatchQueue.main.async {
-
-                self?.tableView.reloadData()
-            }
-        }
-
-
         tableView.register(NewssTableViewCell.nib, forCellReuseIdentifier: NewssTableViewCell.identifier)
     }
     
@@ -33,5 +26,21 @@ class NewsListTableViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    
+}
+extension NewsListTableViewController: ArticleModelDelegate {
+    
+    func didFinishUpdate() {
+            self.tableView?.reloadData()
+    }
+    
+    func apply(changes: SectionChanges) {
+        self.tableView.beginUpdates()
+        self.tableView.deleteSections(changes.deletes, with: .fade)
+        self.tableView.insertSections(changes.inserts, with: .fade)
+        self.tableView.reloadRows(at: changes.updates.reloads, with: .left)
+        self.tableView.insertRows(at: changes.updates.inserts, with: .right)
+        self.tableView.deleteRows(at: changes.updates.deletes, with: .bottom)
+       }
     
 }

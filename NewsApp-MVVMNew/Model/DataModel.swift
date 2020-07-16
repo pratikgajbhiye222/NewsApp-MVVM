@@ -17,10 +17,39 @@ struct ArticlesList: Codable {
 // MARK: - Article
 struct Article: Codable {
     let title: String?
-    let description: String?
+    let descriptionDetails: String?
 }
 
 // MARK: - Source
 
 
+
+class ArticlesList2 : Decodable {
+    var articles = [Articles2]()
+    init?(data: [String: AnyObject]?) {
+        if let data = data, let articles = data["articles"] as? [Any] {
+            self.articles = articles.compactMap{ Articles2(json: $0 as? [String: Any]) }
+        } else {
+            return
+        }
+    }
+}
+
+class Articles2 : Decodable {
+    var title: String = ""
+    var descriptionDetails: String = ""
+    init?(json: [String: Any]?) {
+        guard let json = json else {
+            return nil
+        }
+        self.title = json["title"] as? String ?? ""
+        self.descriptionDetails = json["description"] as? String ?? ""
+    }
+}
+
+extension Articles2 : CustomStringConvertible {
+    var description: String {
+    return "\(title):\(descriptionDetails)"
+    }
+}
 
